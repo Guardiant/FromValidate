@@ -20,7 +20,8 @@ js表单验证器	 	<br />
 var Guardian = new Object(Guardian);	<br />
 Guardian.init($('#acitv1'));	<br />
 </script>	<br />
-
+<pre>
+<pre/>
 
 可优化点。提交按钮必须必须有sub的class属性	<br />
 可验证输入框 单选框 多选框 等等	<br />
