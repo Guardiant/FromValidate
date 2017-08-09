@@ -7,20 +7,13 @@ js表单验证器	 	<br />
 
 <script src="./Guardian.js"></script>	<br />
 
-<pre>
-<form  id="acitv1">	<br />
-	<li>	<br />
-		<input type="text" name="user_name" value='' validate='on' empty-data='用户名不能为空' error-data="用户名格式不正确" validate-method='0' inputType='on' />	<br />
-		<span></span>	<br />
-	</li>	<br />
-</form>	<br />
-</pre>
-实例化类方法，调用区域内id值，如	<br />
+实例化类方法，调用区域内id值，	<br />
 <script>	<br />
 var Guardian = new Object(Guardian);	<br />
-Guardian.init($('#acitv1'));	<br />
+Guardian.init(验证区域id);	<br />
 </script>	<br />
-
+<pre>
+<pre/>
 
 可优化点。提交按钮必须必须有sub的class属性	<br />
 可验证输入框 单选框 多选框 等等	<br />
