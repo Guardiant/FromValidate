@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form  id="acitv1">
+		<li><input type="text" name="user_name" value='' validate='on' empty-data='用户名不能为空' error-data="用户名格式不正确" validate-method='0' inputType='on' /><span></span></li>
+		<li><input type="text" name="user_pass" value='' validate='on'  empty-data='密码不能为空1' error-data="请输入强大一点的密码"  validate-method='6' inputType='on'/><span></span></li>
+		<li><input type="text" name="user_email" value='' validate='on' empty-data='用户名不能为空1' error-data="邮箱格式不正确" validate-method='5' inputType='on'/><span></span></li>
+		<li><input type="radio" name="user_radio" id="" validate='on'  radio='a' inputType='off' empty-data='用户名不能为空' error-data="用户名格式不正确" />a<input type="radio" name="user_radio" id="" validate='on'  radio='a'  empty-data='用户名不能为空' error-data="用户名格式不正确"  inputType='off'/>b
+		<input type="radio" name="user_radioa" id="" validate='on'  radio='b'  empty-data='用户名不能为空' error-data="用户名格式不正确"  inputType='off'/>a
+		<input type="radio" name="user_radioa" id="" validate='on'  radio='b'  empty-data='用户名不能为空' error-data="用户名格式不正确"  inputType='off'/>b <span></span></li>
+
+		<li><input type="checkbox" name="user_box[]" id="" validate='on' check=1  inputType='off' empty-data='用户名不能为空' error-data="用户名格式不正确" Checkmin='2' Checkmax='3'>a
+		<input type="checkbox" name="user_box[]" id="" validate='on' check=1  inputType='off' Checkmin='2' Checkmax='3'>b
+		<input type="checkbox" name="user_box[]" id="" validate='on' check=1  inputType='off' Checkmin='2' Checkmax='3'>c
+		<input type="checkbox" name="user_box[]" id="" validate='on' check=1  inputType='off' Checkmin='2' Checkmax='3'>d
+		<input type="checkbox" name="user_box[]" id="" validate='on' check=1  inputType='off' Checkmin='2' Checkmax='3'>a
+		<input type="checkbox" name="user_box[]" id="" validate='on' check=1  inputType='off' Checkmin='2' Checkmax='3'>b
+		<input type="checkbox" name="user_box[]" id="" validate='on' check=1  inputType='off' Checkmin='2' Checkmax='3'>c
+		<input type="checkbox" name="user_box[]" id="" validate='on' check=1  inputType='off' Checkmin='2' Checkmax='3'>d <span></span></li>
+	<hr>
+		<li><input type="checkbox" name="user_ba[]" id="" validate='on' check=1  inputType='off' empty-data='用户名不能为空' error-data="用户名格式不正确" Checkmin='1' Checkmax='3'>d
+		<input type="checkbox" name="user_ba[]" id="" validate='on' check=1  inputType='off' Checkmin='1' Checkmax='3'>d
+		<input type="checkbox" name="user_ba[]" id="" validate='on' check=1  inputType='off' Checkmin='1' Checkmax='3'>d<span></span></li>
+
+		<li>
+			<select name="select" validate='on' id=""  empty-data='用户名不能为空' error-data="用户名格式不正确" >
+				<option value ="">空</option>
+				<option value ="1">Volvo</option>
+				<option value ="2">Volvo1</option>
+				<option value ="3">Volvo2</option>
+			</select>
+			<span></span>
+		</li>
+		<li>
+			<select name="select1" validate='on' id="">
+				<option value ="">空</option>
+				<option value ="1">Volvo</option>
+				<option value ="2">Volvo1</option>
+				<option value ="3">Volvo2</option>
+			</select>
+		</li>
+		<li>
+			<textarea name="textarea" textarea='on' id="" cols="30" rows="10" validate='on' empty-data='用户名不能为空' error-data="用户名格式不正确" validate-method='8'></textarea>
+			<span></span>
+		</li>
+		<input type="submit" class="sub" value="提交">
+	</form>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./Guardian.js"></script>
+<script>
+var Guardian = new Object(Guardian);
+Guardian.init($('#acitv1'));
+</script>
+
+</body>
+</html>
