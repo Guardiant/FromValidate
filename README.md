@@ -10,7 +10,7 @@ js表单验证器	 	<br />
 实例化类方法，调用区域内id值，如	
 <script>	<br />
 var Guardian = new Object(Guardian);	<br />
-Guardian.init(验证区域id);	<br />
+Guardian.init(验证区域id,点击按钮属性值);	<br />
 </script>	<br />
 <pre>
 <pre/>
