@@ -14,7 +14,7 @@ Guardian.init(验证区域id,点击按钮属性值);	<br />
 </script>	<br />
 请在点击按钮前面添加<br>
 <pre>
-<input type="hidden" code_info="0" name="code_info"><br>
+ &lt;input type="hidden" code_info="0" name="code_info" &gt;<br>
 </pre>
 用于判断验证是否通过
 <pre>
@@ -29,7 +29,7 @@ inputType  off  点击类型	<br />
 Checkmin    多选框最少选中个数	<br />
 Checkmax    多选框最多选中个数	<br />
 
-validate  on/off  为验证数据	<br />
+validate  on 为验证数据 off或者不添加为不验证	<br />
 empty-data    	数据为空提示信息	<br />
 error-data 	    数据错误提示信息<br />
 validate-method			数据验证方式   	<br />
