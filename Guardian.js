@@ -1,6 +1,6 @@
 var Guardian = {
 
-	init:function (obj){
+	init:function (obj,btn){
 		var InputData = [];
 		obj.each(function(){
 			InputData = $(this).find('input');
@@ -12,7 +12,7 @@ var Guardian = {
 				this.Ready(InputName);
 			}
 		}
-		this.sub(obj);
+		this.sub(obj,btn);
 	},
 
 	Ready:function (InputName,code_info = 'true'){
@@ -23,7 +23,7 @@ var Guardian = {
 		}
 	},
 
-	InputBlur:function (obj,code_info = 'true'){
+	InputBlur:function (obj,code_info='true'){
 		if(code_info){
 			obj.blur(function(){
 				var InputValidate = obj.attr('validate-method');
@@ -60,15 +60,20 @@ var Guardian = {
 	sub_error:function (obj,info){
 		obj.attr('return','0');
 	    obj.css({'border':'1px solid #a94442'});
-	    obj.parent('li').children('span').html(info);
-	    obj.parent('li').addClass('guardian');
+        var span_ = $("<span></span>").html(info);
+        obj.parent('div').children('span').remove();
+        if(obj.next('span').size() < 1){
+            obj.parent('div').append(span_);
+        }
+	    obj.parent('div').addClass('guardian');
+
 	},
 
 	sub_info:function (obj,info){
 		obj.attr('return','1');
 	    obj.css({'border':'1px solid #27d'});
-	    obj.parent('li').children('span').html(info);
-	    obj.parent('li').removeClass('guardian');
+        obj.parent('div').children('span').remove();
+	    obj.parent('div').removeClass('guardian');
 	},
 
 	FormatCode:function (con, arr_of){
@@ -80,12 +85,12 @@ var Guardian = {
         arr['4'] = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
         arr['5'] = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
         arr['6'] = /^([a-z0-9]{8,})$/;
-        arr['7'] = /^[a-zA-Z0-9-]{4}$/;
+        arr['7'] = /^[a-zA-Z0-9-]{4,}$/;
         arr['8'] = /^[\u4E00-\u9FA5]+$/;
         arr['9'] = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
         arr['10'] = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
         arr['11'] = /^[1-9]\d*$/;
-        arr['12'] = /^-[1-9]\d*$ /;
+        arr['12'] = /^-[1-9]\d*$/;
 
         if(typeof arr_of == 'object'){
             var str = new Array();
@@ -139,7 +144,11 @@ var Guardian = {
 			this.sub_error(InputName,InputEmpty);
 		}else{
 			if(len < min || len > max){
-				this.sub_error(InputName,InputEmpty);
+				if(InputError){
+					this.sub_error(InputName,InputError);	
+				}else{
+					this.sub_error(InputName,InputEmpty);
+				}
 			}else{
 				this.sub_info(InputName,'')
 			}
@@ -224,8 +233,8 @@ var Guardian = {
 		
 	},
 
-	sub:function(obj){
-		$('.sub').click(function(){
+	sub:function(obj,btn){
+        btn.click(function(){
 			obj.each(function(){
 				InputText = $(this).find('input');
 			})
@@ -241,10 +250,12 @@ var Guardian = {
 			}
 			Guardian.Select(obj);
 			Guardian.Textarea(obj);
-			if(obj.children().hasClass('guardian')){
+
+			if($('.guardian').size()){
+                $(this).prev('input[name="code_info"]').attr('code_info',0);
 				return false;
 			}else{
-				alert('完成验证');
+				$(this).prev('input[name="code_info"]').attr('code_info',1);
 			}
 			
 		})

@@ -1,0 +1,50 @@
+#code_email{
+    position:absolute;
+    top:0px;
+    margin-top:100px;
+    width:380px;
+    left:50%;
+    margin-left:-190px;
+    z-index:11;
+    background: #ffffff;
+    border:1px solid #ccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 0px #ccc;
+    -moz-box-shadow: 0px 0px 0px #ccc;
+    box-shadow: 0px 0px 0px #ccc ;
+    display:none;
+}
+#code_email .head_email{
+    width:100%;
+    font-size:16px;
+    text-align:center;
+    padding:6px;
+    background: #e9e4d3;
+    color:#000000;
+    margin-bottom:10px;
+}
+#code_email .input_div{
+    margin:3px auto;
+    text-align: center;
+    margin:20px auto;
+}
+#code_email .input_div input{
+    width:100px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border:1px solid #ccc;
+    padding-left:8px;
+    height:30px;
+    line-height:30px;
+}
+#code_email .input_div span{
+    padding:6px 10px;
+    border:1px solid #ccc;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}

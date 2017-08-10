@@ -1,0 +1,210 @@
+
+@keyframes cc{
+	0%{opacity: 0.4;transform: scale(0.1) ;top: -500px;}
+	50%{opacity: 0.4;transform: scale(0.1) rotateX(90deg);top: -50px;}
+	100%{opacity: 1;transform: scale(1) rotateX(0deg);top: 0;}
+}
+@media only screen and (max-width: 500px) {
+	.login{
+		width: 95%!important;
+	}
+	.sr{
+	padding:30px 70px!important;
+    }
+}
+html,body{
+  height:100%;
+  width:100%;
+  background-size:1920px 1000px;
+  perspective:500px;
+  overflow: hidden;
+}
+*{
+	font-family:"楷体";
+	font-weight:lighter;
+}
+.login{
+	width:450px;
+	position: relative;
+	top: 0;
+	margin: 10% auto;
+	background:rgba(255,255,255,1);
+	border-radius: 10px;
+    color: #27d;
+}
+
+.an{
+	animation: cc 4s ease-in-out ;
+}
+
+.login header{
+	
+    padding: 10px;
+    border-bottom: 1px solid #27d;
+}
+.login header h1{
+	margin:0;
+	padding:0;
+	text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+}
+.sr{
+	padding:30px 90px;
+}
+.sr .form_div span{
+	height:14px;
+	width:100%;
+	display: block;
+	margin-bottom:12px;
+	color:#a94442;
+	font-size:13.5px;
+}
+.name{
+	position:relative;
+	clear:both;
+	border:1px solid #27d;
+	width: 100%;
+    height: 40px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	padding: 0px 5px;
+}
+.name label{
+	position: absolute;
+    color: #676869;
+    top: 10px;
+    left: 10px;
+}
+.name_inp{
+	padding-left: 34px;
+	height: 38px;
+    line-height: 38px;
+    line-height: 36px\9;
+    border: none;
+    background-color: #fff;
+    width:100%;
+    outline:none;
+}
+.dl{
+	width:150px;
+	height:40px;
+	background:#27d;
+	line-height:40px;
+	display:block;
+	margin:0 auto;
+	color:#fff;
+	border:0;
+	font-size:18px;
+}
+
+html{height: 100%}
+body{margin: 0;height: 100%;
+	background: #fafafa;}
+canvas{display: block;width: 100%;height: 100%;}
+.body_content{
+	position: absolute;
+	top:30%;
+	left: 20%;
+	height: 20%;
+	background: palevioletred;
+	width: 20%;
+}
+#canvas{
+	position: absolute;
+	left:0px;
+	top: 0px;
+	z-index: -1;
+}
+.login{
+	border:1px solid #ccc;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow:0px 0px 15px #ccc;
+	-moz-box-shadow:0px 0px 15px #ccc;
+	box-shadow: 0px 0px 15px #ccc;
+}
+.field{
+	margin-bottom: 10px;
+	text-align:center;
+}
+
+.divider{
+	display: table;
+	white-space: nowrap;
+	height: auto;
+	margin: '';
+	line-height: 1;
+	clear: both;
+	margin: 1em 0em;
+	margin-bottom:0.5em;
+}
+
+.field .divider:before,.field .divider:after{
+	content: '';
+	display: table-cell;
+	position: relative;
+	top: 50%;
+	width: 50%;
+	background-repeat: no-repeat;
+}
+
+
+.field .divider:before, .field .divider:after{
+	background-image:url("../images/hr.png");
+}
+
+.field .divider:before {
+	background-position: right 1em top 50%;
+}
+.field .divider:after {
+	background-position: left 1em top 50%;
+}
+.list {
+	width:100%;
+	margin-top:5px;
+	display: inline-block;
+	font-size: 0em;
+	height:42px;
+}
+.list .item{
+	float:left;
+	width:41px;
+	height:41px;
+}
+.list .item div{
+	display: block;
+}
+.list .item .qq{
+	width:100%;
+	height:100%;
+	background:url('../images/qq.png') center center no-repeat;
+	background-size:100%;
+}
+
+.list .item .wechat{
+	width:100%;
+	height:100%;
+	background:url('../images/wechat.png') center center no-repeat;
+	background-size:100%;
+}
+
+.list .item .qq:hover{
+	background:url('../images/qq_32.png')  center center no-repeat;
+	background-size:100%;
+}
+.list .item .wechat:hover{
+	background:url('../images/wechat_32.png')  center center no-repeat;
+	background-size:100%;
+}
+
+.Verify{
+	width:40%;
+	height:38px;
+	border:1px solid #ccc;
+	float: right;
+}
+
+
