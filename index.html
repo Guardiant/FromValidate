@@ -102,49 +102,49 @@
             </div>
             <div class="input_code">
                 <label>用户名：</label>
-                <input style="width:190px;" type="email" name="user_name" value="" inputType="on" validate="on"
+                <input style="width:190px;" type="email" name="user_name" value="" inputType="on" validate="off"
                        empty-data="用户名不能为空" error-data="用户名为全中文的" validate-method='8'>
             </div>
             <div class="input_code">
                 <label>手机号：</label>
-                <input style="width:190px;" type="email" name="user_phone" value="" inputType="on" validate="on"
+                <input style="width:190px;" type="email" name="user_phone" value="" inputType="on" validate="off"
                        empty-data="手机号不能为空" error-data="手机号格式不正确" validate-method='3'>
             </div>
             <div class="input_code">
                 <label>ip验证：</label>
-                <input style="width:190px;" type="email" name="user_ip" value="" inputType="on" validate="on"
+                <input style="width:190px;" type="email" name="user_ip" value="" inputType="on" validate="off"
                        empty-data="ip不能为空" error-data="ip格式不正确" validate-method='9'>
             </div>
             <div class="input_code">
                 <label>验证url：</label>
-                <input style="width:190px;" type="email" name="user_url" value="" inputType="on" validate="on"
+                <input style="width:190px;" type="email" name="user_url" value="" inputType="on" validate="off"
                        empty-data="url不能为空" error-data="url格式不正确" validate-method='10'>
             </div>
             <div class="input_code">
                 <label>正整数：</label>
-                <input style="width:190px;" type="email" name="user_integer" value="" inputType="on" validate="on"
+                <input style="width:190px;" type="email" name="user_integer" value="" inputType="on" validate="off"
                        empty-data="内容不能为空" error-data="内容格式不正确" validate-method='11'>
             </div>
             <div class="input_code">
                 <label>负整数：</label>
-                <input style="width:190px;" type="email" name="negative_integer" value="" inputType="on" validate="on"
+                <input style="width:190px;" type="email" name="negative_integer" value="" inputType="on" validate="off"
                        empty-data="内容不能为空" error-data="内容格式不正确" validate-method='12'>
             </div>
             <div class="input_code">
                 <label>单选框：</label>
-                <input type="radio" name="Radio" id="" empty-data="内容不能为空" error-data="" inputType="off" validate="on">单选1
+                <input type="radio" name="Radio" id="" empty-data="内容不能为空" error-data="" inputType="off" validate="off">单选1
                 <input type="radio" name="Radio" id="">单选2
                 <input type="radio" name="Radio" id="">单选3
             </div>
             <div class="input_code">
                 <label>多选框：</label>
-                <input type="checkbox" name="checkbox[]" id="" empty-data="多选不能为空" error-data="做多选择2个" inputType="off" validate="on" Checkmin='1' Checkmax='2'>多选1
+                <input type="checkbox" name="checkbox[]" id="" empty-data="多选不能为空" error-data="做多选择2个" inputType="off" validate="off" Checkmin='1' Checkmax='2'>多选1
                 <input type="checkbox" name="checkbox[]" id="">多选2
                 <input type="checkbox" name="checkbox[]" id="">多选3
             </div>
             <div class="input_code">
                 <label>下拉框：</label>
-                <select name="select" style="width:190px;"   validate='on'  empty-data='下拉框不能为空' error-data="下拉框选择不正确" >
+                <select name="select" style="width:190px;"   validate='off'  empty-data='下拉框不能为空' error-data="下拉框选择不正确" >
                     <option value ="">空</option>
                     <option value ="1">Volvo</option>
                     <option value ="2">Volvo1</option>
@@ -153,11 +153,11 @@
             </div>
             <div class="input_code">
                 <label>文本输入：</label>
-                <textarea name="textarea" textarea='on' id="" cols="24" rows="5" validate='on' empty-data='文本输入不能为空' error-data="文本输入验证为全中文" validate-method='8'></textarea>
+                <textarea name="textarea" textarea='on' id="" cols="24" rows="5" validate='off' empty-data='文本输入不能为空' error-data="文本输入验证为全中文" validate-method='8'></textarea>
             </div>
         </div>
         <div style="clear:both;height: 6px;"></div>
-        <div><input type="hidden" code_info="0" name="code_info"><span class="btn">发送</span></div>
+        <div><span class="btn">发送</span></div>
 
 
     </div>
@@ -167,9 +167,10 @@
 <script>
     Guardian = new Object(Guardian);
     Guardian.init($('.email_div'),$('.btn'));
+
     $('.btn').click(function(){
-        if($(this).prev('input[name="code_info"]').attr('code_info') == '1'){
-             alert('验证通过')   
+        if(Guardian.is_ok($(this))){
+            alert('验证通过')   
         }
     })
 </script>

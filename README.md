@@ -12,11 +12,11 @@ js表单验证器	 	<br />
 var Guardian = new Object(Guardian);	<br />
 Guardian.init(验证区域id,点击按钮属性值);	<br />
 </script>	<br />
-请在点击按钮前面添加<br>
-<pre>
- &lt;input type="hidden" code_info="0" name="code_info" &gt;<br>
-</pre>
-用于判断验证是否通过
+$('.btn').click(function(){	<br />
+    if(Guardian.is_ok($(this))){	<br />
+        alert('验证通过')   	<br />
+    }<br />
+})<br />
 <pre>
 <pre/>
 

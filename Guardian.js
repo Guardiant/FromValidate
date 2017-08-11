@@ -15,6 +15,7 @@ var Guardian = {
         this.sub(obj,btn);
     },
 
+
     Ready:function (InputName,code_info = 'true'){
         Name = $('input[name="'+InputName+'"]');
 
@@ -248,13 +249,19 @@ var Guardian = {
             Guardian.Select(obj);
             Guardian.Textarea(obj);
             if($('.guardian').size()){
-                $(this).prev('input[name="code_info"]').attr('code_info',0);
+                $(this).attr('CodeInfo',0);
                 return false;
             }else{
-                $(this).prev('input[name="code_info"]').attr('code_info',1);
+                $(this).attr('CodeInfo',1);
             }
 
         })
+    },
 
+    is_ok:function(btn){
+        if(btn.attr('CodeInfo') == 1){
+            return true;
+        }
+        
     }
 }
