@@ -168,7 +168,7 @@
     Guardian = new Object(Guardian);
     Guardian.init($('.email_div'),$('.btn'));
     $('.btn').click(function(){
-        if($(this).prev('input[name="code_info"]').attr('code_info') == '1'){
+        if($(this).attr('code_info') == '1'){
              alert('验证通过')   
         }
     })
