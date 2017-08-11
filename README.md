@@ -13,7 +13,7 @@ var Guardian = new Object(Guardian);	<br />
 Guardian.init(验证区域id,点击按钮属性值);	<br />
 </script>	<br />
 $('.btn').click(function(){	<br />
-    if(Guardian.is_ok($(this))){	<br />
+    if(Guardian.is_ok()){	<br />
         alert('验证通过')   	<br />
     }<br />
 })<br />
