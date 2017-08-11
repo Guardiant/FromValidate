@@ -169,9 +169,13 @@
     Guardian.init($('.email_div'),$('.btn'));
 
     $('.btn').click(function(){
-        if(Guardian.is_ok($(this))){
+        if(Guardian.is_ok()){
             alert('验证通过')   
         }
+    })
+
+    setTimeout(function(){
+        $('.email_div').append('');
     })
 </script>
 </body>

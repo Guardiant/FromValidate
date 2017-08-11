@@ -13,6 +13,7 @@ var Guardian = {
             }
         }
         this.sub(obj,btn);
+        this._btn = btn;
     },
 
 
@@ -258,8 +259,8 @@ var Guardian = {
         })
     },
 
-    is_ok:function(btn){
-        if(btn.attr('CodeInfo') == 1){
+    is_ok:function(){
+        if(this._btn.attr('CodeInfo') == 1){
             return true;
         }
         
